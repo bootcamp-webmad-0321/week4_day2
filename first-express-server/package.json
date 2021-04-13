@@ -1,0 +1,19 @@
+{
+  "name": "first-express-server",
+  "version": "1.0.0",
+  "description": "First ExpressJS server for Ironhack Madrid",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ExpressJS",
+    "server"
+  ],
+  "author": "Germán",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "hbs": "^4.1.1"
+  }
+}

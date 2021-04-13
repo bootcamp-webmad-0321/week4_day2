@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popino's site!</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <h1>Soy la reserva de {{studentName}} en HBS</h1>
+    <p>Tu reserva para el campus de {{campus}} está confirmada para la fecha {{date}}</p>
+    <p>Comenzarás el {{{bootcamp}}} en breves, ¡calienta que sales!</p>
+
+    <hr>
+
+    {{#if confirmed}}
+    <p>Te informamos que el Bootcamp está 100% confirmado</p>
+    {{/if}}
+
+    <hr>
+
+    {{#with address}}
+    <p>Estamos en la calle {{street}} {{number}}</p>
+    {{/with}}
+
+    <hr>
+
+    <h3>Estado de pago</h3>
+
+    {{#if pending}}
+    <p><strong>Aviso:</strong> tu reserva de {{cost}}€ aún no ha sido abonada</p>
+    {{else}}
+    <p>Tu reserva de {{cost}}€ ya ha sido abonada en su totalidad</p>
+    {{/if}}
+
+    <hr>
+
+    <h3>Materias</h3>
+    <ul>
+        {{#each subjects}}
+        <li>{{this}}</li>
+        {{/each}}
+    </ul>
+
+    <hr>
+
+    {{#unless address}}
+    <p>AVISO!: no disponemos de tu dirección. Envíanosla ya</p>
+    {{/unless}}
+
+
+</body>
+
+</html>
